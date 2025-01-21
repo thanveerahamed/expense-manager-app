@@ -1,0 +1,16 @@
+export type ChartType =
+    | 'line'
+    | 'area'
+    | 'bar'
+    | 'pie'
+    | 'donut'
+    | 'radialBar'
+    | 'scatter'
+    | 'bubble'
+    | 'heatmap'
+    | 'treemap'
+    | 'boxPlot'
+    | 'candlestick'
+    | 'radar'
+    | 'polarArea'
+    | 'rangeBar';

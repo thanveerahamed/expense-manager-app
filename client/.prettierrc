@@ -1,0 +1,25 @@
+{
+  "arrowParens": "always",
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "quoteProps": "consistent",
+  "importOrder": [
+    "react",
+    "<THIRD_PARTY_MODULES>",
+    "interface",
+    "(?=content|api)",
+    "context/",
+    "mock/",
+    "config",
+    "utils/",
+    "hooks/",
+    "(components/|./index)",
+    ".svg",
+    "^../(.*)$",
+    "(?=./styles.module.scss)"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
