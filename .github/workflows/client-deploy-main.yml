@@ -6,6 +6,8 @@ name: deploy client to production
   push:
     paths:
       - 'client/**'
+  workflow_dispatch:
+
 permissions:
   id-token: write
   contents: read

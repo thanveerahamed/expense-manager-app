@@ -1,0 +1,13 @@
+{
+  "name": "expense-manager-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "artifactregistry-login": "npx google-artifactregistry-auth"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

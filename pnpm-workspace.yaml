@@ -1,0 +1,6 @@
+packages:
+  - client
+  - functions
+  - schema
+  - scripts
+  - server
