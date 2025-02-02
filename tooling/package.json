@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start:emulator": "firebase emulators:start --import ./firestore-data --export-on-exit ./firestore-data",
-    "start": "tsc --build && node ./dist/index.js"
+    "start": "tsc --build && node ./dist/index.js",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type:check": "tsc -noEmit --skipLibCheck",
+    "format:check": "prettier --check '**/*.{js,json,md,ts,yml,yaml,tsx}'",
+    "format:fix": "prettier --write '**/*.{js,json,md,ts,yml,yaml,tsx}'"
   },
   "keywords": [],
   "author": "",

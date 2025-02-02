@@ -1,9 +1,9 @@
-import {isEmailValid, isFieldEmpty} from '../../common/validators';
+import { isEmailValid, isFieldEmpty } from '../../common/validators';
 
 export const isSignUpFormValid = (
-    name: string,
-    email: string,
-    password: string,
+  name: string,
+  email: string,
+  password: string,
 ) => {
-    return isEmailValid(email) && !isFieldEmpty(password) && !isFieldEmpty(name);
+  return isEmailValid(email) && !isFieldEmpty(password) && !isFieldEmpty(name);
 };

@@ -1,12 +1,12 @@
-import {Collections} from '@expense-manager/schema';
+import { Collections } from '@expense-manager/schema';
 
 export type AmountValue = { amount: number; currency: string };
 
 export interface LabelWithId extends Collections.Labels.Entity {
-    id: string;
+  id: string;
 }
 
 export interface LabelWithAmount {
-    label: Collections.Labels.LabelWithId;
-    amount: AmountValue;
+  label: Collections.Labels.LabelWithId;
+  amount: AmountValue;
 }

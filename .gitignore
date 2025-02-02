@@ -3,12 +3,12 @@
 **/build
 !.npmrc
 /server/.npmrc
-/scripts/.npmrc
+/tooling/.npmrc
 /schema/.npmrc
 /functions/.npmrc
 /client/.npmrc
-/scripts/firestore-data/
-/scripts/firebase-export-1724340784647pI43lX/
+/tooling/firestore-data/
+/tooling/firebase-export-1724340784647pI43lX/
 **/*.log
 **/.env
 **/lib/

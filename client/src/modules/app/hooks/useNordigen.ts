@@ -1,47 +1,50 @@
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 
-import {deleteNordigenReference, getNordigenReference,} from '../../../common/storage';
-import {updateAuthorizationInformation} from '../../../store/reducers/connectionsSlice';
-import {useAppDispatch} from '../../../store/store';
+import {
+  deleteNordigenReference,
+  getNordigenReference,
+} from '../../../common/storage';
+import { updateAuthorizationInformation } from '../../../store/reducers/connectionsSlice';
+import { useAppDispatch } from '../../../store/store';
 
 const isAuthorizationReturnUrl = () =>
-    window.location.pathname === '/connection-setup/bank-selector/result';
+  window.location.pathname === '/connection-setup/bank-selector/result';
 
 export const useNordigen = () => {
-    const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
-    useEffect(() => {
-        const savedReference = getNordigenReference();
+  useEffect(() => {
+    const savedReference = getNordigenReference();
 
-        if (savedReference === undefined) {
-            return;
-        }
+    if (savedReference === undefined) {
+      return;
+    }
 
-        if (isAuthorizationReturnUrl()) {
-            const urlParams = new URLSearchParams(window.location.search);
-            const referenceFromUrl = urlParams.get('ref');
+    if (isAuthorizationReturnUrl()) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const referenceFromUrl = urlParams.get('ref');
 
-            if (referenceFromUrl === null || referenceFromUrl !== savedReference) {
-                deleteNordigenReference();
-                return;
-            }
+      if (referenceFromUrl === null || referenceFromUrl !== savedReference) {
+        deleteNordigenReference();
+        return;
+      }
 
-            const error = urlParams.get('error');
-            const details = urlParams.get('details');
+      const error = urlParams.get('error');
+      const details = urlParams.get('details');
 
-            dispatch(
-                updateAuthorizationInformation({
-                    errorMessage:
-                        error !== null && details !== null
-                            ? details.replace('+', ' ')
-                            : undefined,
-                    success: error === null,
-                }),
-            );
+      dispatch(
+        updateAuthorizationInformation({
+          errorMessage:
+            error !== null && details !== null
+              ? details.replace('+', ' ')
+              : undefined,
+          success: error === null,
+        }),
+      );
 
-            deleteNordigenReference();
-        }
+      deleteNordigenReference();
+    }
 
-        //  eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    //  eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 };

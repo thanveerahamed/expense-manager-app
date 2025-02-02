@@ -1,11 +1,11 @@
-import {SxProps} from '@mui/material';
+import { SxProps } from '@mui/material';
 
 export const cardContentStyle: SxProps = {
-    padding: '0',
+  padding: '0',
 };
 
 export const labelsCarContentStyle: SxProps = {
-    ...cardContentStyle,
-    maxHeight: '210px',
-    overflow: 'scroll',
+  ...cardContentStyle,
+  maxHeight: '210px',
+  overflow: 'scroll',
 };

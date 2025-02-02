@@ -1,6 +1,6 @@
-import {Collections} from '@expense-manager/schema';
+import { Collections } from '@expense-manager/schema';
 
 export interface GetTransactionsResponse {
-    transactions: Collections.Transactions.Entity[];
-    nextPageToken?: string;
+  transactions: Collections.Transactions.Entity[];
+  nextPageToken?: string;
 }
