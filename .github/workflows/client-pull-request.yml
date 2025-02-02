@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: Client Pull Request
 
 on:
   pull_request_target:
