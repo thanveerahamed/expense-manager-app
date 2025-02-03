@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "artifactregistry-login": "npx google-artifactregistry-auth"
+    "artifactregistry-login": "npx google-artifactregistry-auth",
+    "format:fix:all": "./run-scripts-in-dirs.sh format:fix",
+    "lint:fix:all": "./run-scripts-in-dirs.sh lint:fix"
   },
   "keywords": [],
   "author": "",

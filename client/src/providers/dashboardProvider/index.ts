@@ -33,7 +33,9 @@ export const getDashboardNewTransactions = async (): Promise<
   return apiGet<Services.Transactions.Transaction[]>(getNewTransactions);
 };
 
-export const setTransactionToOld = async (transactionId: string): Promise<void> => {
+export const setTransactionToOld = async (
+  transactionId: string,
+): Promise<void> => {
   const setTransactionToOldUrl = `${dashboardUrl}/set-transaction-old`;
   return apiPost(setTransactionToOldUrl, { transactionId });
 };

@@ -1,4 +1,4 @@
-name: Deploy Firebase Functions
+name: Fuctions Deploy
 
 on:
   push:

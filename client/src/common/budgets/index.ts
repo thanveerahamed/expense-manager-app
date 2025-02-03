@@ -28,8 +28,9 @@ export const getRemainingAmount = (
   overview: Services.Budgets.BudgetOverview,
 ): number => Number(overview.budget.amount) - Number(overview.expense.amount);
 
-export const getTotalAmountString = (overview: Services.Budgets.BudgetOverview) =>
-  Number(overview.budget.amount).toLocaleString();
+export const getTotalAmountString = (
+  overview: Services.Budgets.BudgetOverview,
+) => Number(overview.budget.amount).toLocaleString();
 
 export const isBudgetValidForCreate = (budget: Services.Budgets.Budget) => {
   if (budget.name === '' || budget.amount === 0) {
